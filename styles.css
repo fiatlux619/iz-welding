@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;600&display=swap');
+
+:root {
+    --steel: #1c1c1c;
+    --ember: #ff6a00;
+    --dark: #0b0b0b;
+    --light: #f5f5f5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--dark);
+    color: var(--light);
+    font-family: 'Inter', sans-serif;
+}
+
+/* NAV */
+nav {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(90deg, #000, #222);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--ember);
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Orbitron';
+    font-size: 1.4rem;
+    color: var(--ember);
+    letter-spacing: 2px;
+}
+
+.mobile-menu a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+/* HERO */
+.hero {
+    height: 85vh;
+    background: url("https://images.unsplash.com/photo-1581092919534-7a3b8e6d94a2?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+}
+
+#hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-family: 'Orbitron';
+    font-size: 4rem;
+    color: var(--ember);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
+.certification {
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+    background: var(--ember);
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* SECTIONS */
+.section {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+h2 {
+    color: var(--ember);
+    font-family: 'Orbitron';
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-note {
+    color: #ccc;
+    font-style: italic;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* SERVICES */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-card {
+    background: linear-gradient(145deg, #111, #222);
+    border: 1px solid #333;
+    width: 260px;
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(255,106,0,.15);
+}
+
+/* WHY CHOOSE US */
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature-card {
+    background: #141414;
+    border-left: 4px solid var(--ember);
+    width: 260px;
+    margin: 1rem;
+    padding: 2rem;
+    font-weight: bold;
+}
+
+/* PORTFOLIO */
+.filter-bar button {
+    background: none;
+    border: 1px solid var(--ember);
+    color: var(--ember);
+    padding: .5rem 1.5rem;
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.portfolio-item {
+    width: 45%;
+    max-width: 400px;
+    height: 200px;
+    margin: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-left: 4px solid var(--ember);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .portfolio-item {
+        width: 90%;
+        height: 180px;
+    }
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 20px 30px rgba(255, 106, 0, 0.3);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ember);
+    font-weight: bold;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+/* CONTACT */
+input, select, textarea {
+    width: 80%;
+    max-width: 500px;
+    background: #111;
+    border: 1px solid #333;
+    color: white;
+    padding: 1rem;
+    margin: .7rem 0;
+}
+
+button {
+    background: var(--ember);
+    border: none;
+    padding: 1rem 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IZ Welding | Precision Metal Fabrication</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="styles.css">
+
+<!-- Anime.js for animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
+<script src="script.js" defer></script>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">IZ Welding</div>
+    <button class="mobile-menu-btn">☰</button>
+    <div class="mobile-menu">
+        <a href="#services">Services</a>
+        <a href="#portfolio">Examples</a>
+        <a href="#why">Why Choose Us</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero animate-on-scroll">
+    <div class="hero-overlay"></div>
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+        <h1>IZ Welding</h1>
+        <p>Structural • Custom • Precision Fabrication</p>
+        <p class="certification">✔ AWS Fully Certified Welder</p>
+        <a href="#contact" class="cta">Get a Quote</a>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section animate-on-scroll">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+        <div class="service-card">MIG Welding</div>
+        <div class="service-card">TIG Welding</div>
+        <div class="service-card">Structural Steel</div>
+        <div class="service-card">Custom Fabrication</div>
+        <div class="service-card">Mobile Welding</div>
+        <div class="service-card">Repairs & Modifications</div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why" class="section animate-on-scroll">
+    <h2>Why Choose IZ Welding</h2>
+    <div class="features-grid">
+        <div class="feature-card">✔ Fully AWS Certified</div>
+        <div class="feature-card">✔ Local Northern Arizona Resident</div>
+        <div class="feature-card">✔ Mobile Welding Available</div>
+        <div class="feature-card">✔ Custom & Structural Fabrication</div>
+    </div>
+</section>
+
+<!-- PORTFOLIO / EXAMPLES -->
+<section id="portfolio" class="section animate-on-scroll">
+    <h2>Examples of Our Work</h2>
+    <p class="portfolio-note">Shown here are sample projects to illustrate what IZ Welding can create for you.</p>
+
+    <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="structural">Structural</button>
+        <button class="filter-btn" data-filter="custom">Custom</button>
+        <button class="filter-btn" data-filter="repair">Repair</button>
+    </div>
+
+    <div class="portfolio-grid">
+        <div class="portfolio-item" data-category="structural" style="background-image: url('images/structural-welding.png');">
+            <div class="portfolio-overlay">Example: Structural Welding</div>
+        </div>
+        <div class="portfolio-item" data-category="custom" style="background-image: url('images/custom-fabrication.png');">
+            <div class="portfolio-overlay">Example: Custom Fabrication</div>
+        </div>
+        <div class="portfolio-item" data-category="repair" style="background-image: url('images/equipment-repair.png');">
+            <div class="portfolio-overlay">Example: Equipment Repair</div>
+        </div>
+        <div class="portfolio-item" data-category="custom" style="background-image: url('images/handrail-fabrication.png');">
+            <div class="portfolio-overlay">Example: Precision Welding</div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section animate-on-scroll">
+    <h2>Request a Quote</h2>
+
+    <form id="contact-form"
+          action="https://formspree.io/f/mlgrzvwn"
+          method="POST"
+          target="_blank">
+
+        <input name="name" placeholder="Full Name" required>
+        <input name="email" placeholder="Email Address" required>
+
+        <select name="service" required>
+            <option value="">Select a Service</option>
+            <option>MIG Welding</option>
+            <option>TIG Welding</option>
+            <option>Structural Steel</option>
+            <option>Custom Fabrication</option>
+            <option>Mobile Welding</option>
+        </select>
+
+        <textarea name="message" placeholder="Describe your project" required></textarea>
+
+        <button type="submit">Send Request</button>
+    </form>
+</section>
+
+</body>
+</html>
